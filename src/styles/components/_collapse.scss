@@ -1,0 +1,72 @@
+.collapse {
+  display: flex;
+  width: 100%;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+  &__dropdown {
+    width: 100%;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      width: 80%;
+    }
+
+    &__title {
+      @extend %flex-between;
+      padding: 0.5em 1em;
+      width: 100%;
+      background-color: $primary-color;
+      margin: 0 auto;
+      margin-top: 1.5em;
+      border-radius: 5px;
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        width: 100%;
+      }
+
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-weight:700px;
+        color: $tertiary-color;
+      }
+      button {
+        color: $tertiary-color;
+        border: none;
+        background-color: transparent;
+        .fa-chevron-down {
+          cursor: pointer;
+        }
+        .fa-chevron-up {
+          cursor: pointer;
+        }
+        .fa-chevron-down:active {
+          transform: rotate(180deg);
+          transition: transform 0.3s ease-in-out;
+        }
+        .fa-chevron-up:active {
+          transform: rotate(-180deg);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+    }
+    &__content {
+      background-color: $secondary-color;
+      width: 100%;
+      border-radius: 5px;
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        width: 100%;
+      }
+
+      p {
+        @include font(14px, 400);
+        font-family: "Montserrat", sans-serif;
+        color: #000000;
+        margin: 0 auto;
+        padding: 0.8em;
+        transition: transform 7s ease-in-out;
+      }
+    }
+  }
+}

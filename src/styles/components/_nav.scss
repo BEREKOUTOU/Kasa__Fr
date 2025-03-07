@@ -1,0 +1,37 @@
+.nav-header {
+  @include flex-end;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    text-transform: none;
+  }
+  
+  &__nav-link-home,
+  &__nav-link-about {
+    font-family: "Montserrat", sans-serif;
+    color: #000;
+    text-decoration: none;
+    padding-left: 2rem;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      @include font-right(18px);
+    }
+    
+    &--active,
+    &--active {
+      color: inherit;
+      text-decoration: underline;
+      padding-left: 2rem;
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        @include font-right(18px);
+      }
+    }
+  
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+  }
+}
