@@ -1,36 +1,29 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./styles/app.scss";
 import About from "./pages/about/About";
 import Home from "./pages/home/Home";
 import FichLogement from "./pages/logement/FichLogment";
 import NoPage from "./pages/error/NoPage";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/logement/:id",
-    element: <FichLogement />,
-  },
-  {
-    path: "/404",
-    element: <NoPage />,
-  },
-  {
-    path: "*",
-    element: <NoPage />,
-  },
-]);
+const creatHashRouter = () => {
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/accueil" />} />
+        <Route path="/accueil" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/logement/:id" element={<FichLogement />} />
+        <Route path="*" element={<NoPage />} />
+      </Routes>
+    </HashRouter>
+  );
+};
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <div className="App">{creatHashRouter()}</div>
+  );
 };
 
 export default App;

@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <nav className="nav-header">
       <NavLink
-        to="/"
+        to="/accueil"
         className={({ isActive }) =>
           isActive
             ? "nav-header__nav-link-home--active"
