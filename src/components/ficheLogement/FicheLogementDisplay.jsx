@@ -28,11 +28,7 @@ const FicheLogementDisplay = () => {
 
   /* Équipements */
   const equipements = ficheLogement.equipments.map((equipment, i) => {
-    return (
-      <ul key={i}>
-        <li>{equipment}</li>
-      </ul>
-    );
+    return <li key={i}>{equipment}</li>;
   });
 
   return (
