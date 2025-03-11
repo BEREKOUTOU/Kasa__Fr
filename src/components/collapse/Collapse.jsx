@@ -12,16 +12,14 @@ const Collapse = ({ title, content }) => {
   return (
     // affiche le collapse replié par défaut et l'ouvre au clic puis le referme au clic en faisant disparaitre le texte et le style
     <div className="collapse__dropdown__container">
-      <div className="collapse__dropdown__title">
+      <button className="collapse__dropdown__title" onClick={display}>
         <h2>{title}</h2>
-        <button type="button" onClick={display}>
           {isOpen ? (
             <i className="fa-solid fa-chevron-up"></i>
           ) : (
             <i className="fa-solid fa-chevron-down"></i>
           )}
-        </button>
-      </div>
+      </button>
       {/* Si le collapse est à TRUE alors il affichera la description */}
       <div className="collapse__dropdown__content">
         {isOpen && <p>{content}</p>}

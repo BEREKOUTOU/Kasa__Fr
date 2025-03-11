@@ -19,7 +19,8 @@
       margin: 0 auto;
       margin-top: 1.5em;
       border-radius: 5px;
-
+      border: none;
+      cursor: pointer;
       @media screen and (min-width: $breakpoint-desktop) {
         width: 100%;
       }
@@ -30,25 +31,20 @@
         font-weight:700px;
         color: $tertiary-color;
       }
-      button {
+      .fa-chevron-down {
         color: $tertiary-color;
-        border: none;
-        background-color: transparent;
-        .fa-chevron-down {
-          cursor: pointer;
-        }
-        .fa-chevron-up {
-          cursor: pointer;
-        }
-        .fa-chevron-down:active {
-          transform: rotate(180deg);
-          transition: transform 0.3s ease-in-out;
-        }
-        .fa-chevron-up:active {
-          transform: rotate(-180deg);
-          transition: transform 0.3s ease-in-out;
-        }
       }
+      .fa-chevron-up {
+        color: $tertiary-color;
+      }
+    }
+    &__title:active .fa-chevron-down {
+      transform: rotate(180deg);
+      transition: transform 0.3s ease-in-out;
+    }
+    &__title:active .fa-chevron-up {
+      transform: rotate(-180deg);
+      transition: transform 0.3s ease-in-out;
     }
     &__content {
       background-color: $secondary-color;
