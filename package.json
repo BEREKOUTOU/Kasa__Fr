@@ -1,7 +1,7 @@
 {
   "name": "kasa",
   "version": "0.1.0",
-  "homepage": "https://berekoutou.github.io/Kasa__Fr/",
+  "homepage": "https://github.com/berekoutou.github.io/Kasa__Fr/",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
