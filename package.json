@@ -67,7 +67,7 @@
     "start": "node scripts/start.js",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "test": "node scripts/test.js",
-    "dev": "node scripts/start.js",
+    "dev": "webpack serve --mode development --open",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
