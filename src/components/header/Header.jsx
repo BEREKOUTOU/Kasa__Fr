@@ -1,3 +1,4 @@
+import React from "react";
 import logo from "../../assets/images/logo/LOGO.svg";
 import Nav from "../nav/Nav";
 
