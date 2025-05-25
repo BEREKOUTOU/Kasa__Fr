@@ -1,4 +1,4 @@
-//import React, { useState } from "react";
+import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import DataFichLogement from "../../datas/logement.json";
 import Tag from "./Tag";
