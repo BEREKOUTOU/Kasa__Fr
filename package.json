@@ -1,8 +1,8 @@
 {
   "name": "kasa",
   "version": "0.1.0",
-  "homepage": "https://github.com/berekoutou.github.io/Kasa__Fr/",
   "private": true,
+  "homepage": "https://berekoutou.github.io/Kasa__Fr/",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
@@ -63,7 +63,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "webpack --mode production",
     "test": "node scripts/test.js",
     "dev": "node scripts/start.js",
     "deploy": "gh-pages -d build",
@@ -91,7 +91,8 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "gh-pages": "^5.0.0",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "webpack-cli": "^6.0.1"
   },
   "jest": {
     "roots": [
